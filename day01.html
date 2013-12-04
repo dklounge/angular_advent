@@ -1,0 +1,35 @@
+<!doctype html>
+<html ng-app="myApp">
+  <head>
+    <title>day 1: the service</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+    <script src="js/day01.js"></script>
+    <link rel="stylesheet" href="css/main.css.scss">
+  </head>
+  <body>
+    <div>
+      <h2>Day 1: The Service</h2>
+      <p>In Angular, services are singleton objects that are created when necessary and are never cleaned up until the end of the application life-cycle (when the browser is closed). Controllers are destroyed and cleaned up when they are no longer needed.</p>
+      <p>Each one also creates the same underlying object type. After they are instantiated, they all create a service and there is no functional difference between the object types.</p>
+    </div>
+
+    <div ng-Controller="MainCtrl">
+      <h3>when to use factory()</h3>
+      <p>The factory() method is a great choice to use to build a factory when we just need a collection of methods and data and don't need to do anything especially complex with our service.</p>
+
+      <h3>when to use service()</h3>
+      <p>The service() method is great for creating services where we need a bit more control over the functionality required by our service. It's also mostly guided by preference to use this instead of referring to the service.</p>
+
+      <h3>when to use provider()</h3>
+      <p>This is the only way to create a service that we can configure using the .config() function.</p>
+
+      <p>The provider() method is required when we want to configure our service before the app runs. For instance, if we need to configure our services to use a different back-end based upon different deployment environments (development, staging, and production).</p>
+
+      <p>It's the preferred method for writing services that we intend on distributing open-source as well as it allows us to configure services without needing to hard-code configuration data.</p>
+    </div>
+
+    <div>
+      <p><a href="index.html">Back to Index</a></p>
+    </div>
+  </body>
+</html>
