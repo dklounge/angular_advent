@@ -1,8 +1,9 @@
 <!doctype html>
-<html ng-app>
+<html ng-app="myApp">
   <head>
     <title>day 2: short guide to routing</title>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+    <script src="app/bower_components/angular-route/angular-route.min.js"></script>
     <script src="js/day02.js"></script>
     <link rel="stylesheet" href="css/main.css.scss">
   </head>
@@ -12,11 +13,21 @@
       <h2>day 2: short guide to routing</h2>
     </div>
 
-    <div>
+    <div ng-controller="MainCtrl">
+      <h3>when() method</h3>
+      <p>The when() method defines our routes. It takes two arguments, the string of the route that we want to match and a route definition object. The route string will match on the url in the browser. The main route of the app is usually the '/' route.</p>
+      <h3>otherwise()</h3>
+      <p>The otherwise() method defines the route that our application will use if a route is not found. It's the default route.</p>
     </div>
 
     <div>
       <p><a href="index.html">Back to Index</a></p>
     </div>
+
+    <div ng-view></div>
+    <span class="footer">a footer to</span>
+    <a href="views/main.html">main view</a>
+    <em>// not quite sure about the view - getting error in Chrome</em>
+
   </body>
 </html>
