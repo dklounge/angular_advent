@@ -1,0 +1,47 @@
+<!doctype html>
+<html ng-app='adventApp'>
+  <head>
+    <title>day 4: css classes</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+    <script src="js/day04.js"></script>
+    <link rel="stylesheet" href="css/main.css.scss">
+  </head>
+
+  <body>
+    <div>
+      <h2>day 4: css classes</h2>
+    </div>
+
+    <div>
+      <h3>ng-style</h3>
+      <p>The ng-style directive is a built-in directive that allows us to set styles directly on a DOM element based upon angular expressions.</p>
+    </div>
+
+    <div ng-controller='DemoCtrl'>
+      <select ng-model="selectedColor"
+        ng-options="color for color in allColors">
+      </select>
+      <button ng-click="shouldHighlight = !shouldHighlight">
+        highlight
+      </button>
+      <h2 ng-class="{ highlight: shouldHighlight }"
+        ng-style="{ color: selectedColor }">
+        Hi {{ name }}!
+      </h2>
+    </div>
+
+    <div>
+      <h3>ng-class</h3>
+      <p>The ng-class directive is available for us to apply different css classes to a DOM object, instead of styles. Allowing us to set classes is often more powerful than setting styles directly as we can define our CSS design separate from our business logic of the app.</p>
+    </div>
+
+    <div>
+      <h3>custom directive</h3>
+      <p>When we need to set a large number of styles or we're setting a lot of styles for a particular custom page, we can use the custom directive is an efficient method. For instance, if we're building a site that we allow users to customize a site of theirs.</p>
+    </div>
+
+    <div>
+      <p><a href="index.html">Back to Index</a></p>
+    </div>
+  </body>
+</html>
