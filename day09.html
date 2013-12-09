@@ -1,0 +1,27 @@
+<!doctype html>
+<html ng-app="myFireApp">
+  <head>
+    <title>day 9: real-time with firebase</title>
+    <link rel="stylesheet" href="css/main.css.scss">
+  </head>
+
+  <body ng-controller="MainCtrl">
+    <div>
+      <h2>day 9: real-time with firebase</h2>
+    </div>
+
+    <div>
+      <p>Will make real-time viewer count using Firebase.</p>
+
+      <h2>{{totalViewers}} viewers are viewing</h2>
+    </div>
+
+    <div>
+      <p><a href="index.html">Back to Index</a></p>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.3/angular.min.js"></script>
+    <script src="js/day09.js"></script>
+    <script src="https://cdn.firebase.com/v0/firebase.js"></script>
+  </body>
+</html>
