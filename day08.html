@@ -1,0 +1,33 @@
+<!doctype html>
+<html ng-app="picApp">
+  <head>
+    <title>day 8: data connection</title>
+    <link rel="stylesheet" href="css/main.css.scss">
+  </head>
+
+  <body>
+    <div>
+      <h2>day 8: connecting to data</h2>
+    </div>
+
+    <div>
+      <p>The naive way uses <em>$http</em> service (interface to native <em>XMLHttpRequestObject</em>) to fetch public flikr image.</p>
+      <p>It is not the angular way.</p>
+      <p>Angular way is to create a service that will house our flickr interactions.</p>
+      <p>A service is a singleton object that we can both bundle our common services together as well as use to share data around our application.</p>
+    </div>
+
+    <div ng-controller="FlickrApiCtrl">
+      <a href="{{photo.link}}">
+        <img ng-src="{{photo.media.m}}" alt="{{photo.title}}" />
+      </a>
+    </div>
+
+    <div>
+      <p><a href="index.html">Back to Index</a></p>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.3/angular.min.js"></script>
+    <script src="js/day08.js"></script>
+  </body>
+</html>
