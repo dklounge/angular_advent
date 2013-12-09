@@ -1,0 +1,40 @@
+<!doctype html>
+<html ng-app="myApp">
+  <head>
+    <title>day 6: binding</title>
+    <link rel="stylesheet" href="css/main.css.scss">
+  </head>
+
+  <body>
+    <div>
+      <h2>day 6: expression binding</h2>
+    </div>
+
+    <div>
+      <p>In the view, we are looping over the <em>categories</em> array with <em>ng-repeat</em> and create a <em>category-item</em> div for each object in the <em>categories</em> array.</p>
+
+      <p>Within the div we are binding the <em>display</em> property on the <em>category</em> object.</p>
+      <p>When our user clicks on the <em>category-item</em> div, the <em>ng-click</em> directive calls <em>setCurrentCategory()</em> with the <em>category</em> object along with it.</p>
+    </div>
+
+    <div class="container" ng-controller="StepOneCtrl">
+      <h3>Step One</h3>
+      <div class="row">
+        <div class="col-xs-3 category-item"
+          ng-repeat="category in categories"
+          ng-click="setCurrentCategory(category)"
+          ng-class="{'current-{{category.name}}':isCurrentCategory(category)}">
+          <strong>{{ category.display }}</strong>
+        </div>
+      </div>
+      <h4>Active Category: {{ currentCategory.display }}</h4>
+    </div>
+
+    <div>
+      <p><a href="index.html">Back to Index</a></p>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.3/angular.min.js"></script>
+    <script src="js/day06.js"></script>
+  </body>
+</html>
