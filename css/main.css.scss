@@ -6,3 +6,30 @@ body {
 p {
   line-height: 1.5em;
 }
+
+em {
+  color: red;
+  background: #ede;
+  font-family: Monaco, Consolas, "Courier New", monospace;
+  font-size: 90%;
+}
+
+.current-active {
+    border: 10px solid #626;
+}
+
+.current-one {
+    border: 10px solid #457b97;
+}
+
+.current-two {
+    border: 10px solid #727372;
+}
+
+.current-three {
+    border: 10px solid #a66a48;
+}
+
+.current-four {
+    border: 10px solid #f60;
+}
